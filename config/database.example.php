@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /** Copia este archivo como database.php y ajusta las credenciales de tu entorno. */
-const DB_HOST = '127.0.0.1';
+const DB_HOST = 'localhost';
 const DB_NAME = 'sistema_estudiantes';
 // Configuración de desarrollo para XAMPP. Si tu cuenta root tiene clave, escríbela en DB_PASS.
 const DB_USER = 'root';
