@@ -1,0 +1,13 @@
+erDiagram
+    ESTUDIANTES {
+        INT id PK "Identificador único"
+        VARCHAR identidad UK "Documento de identidad único"
+        VARCHAR nombres "Nombres del estudiante"
+        VARCHAR apellidos "Apellidos del estudiante"
+        VARCHAR correo UK "Correo único"
+        VARCHAR telefono "Teléfono de contacto"
+        DATE fecha_nacimiento "Fecha de nacimiento"
+        VARCHAR carrera "Carrera que cursa"
+        TIMESTAMP created_at "Fecha de creación"
+        TIMESTAMP updated_at "Fecha de actualización"
+    }
