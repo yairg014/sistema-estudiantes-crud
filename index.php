@@ -19,14 +19,21 @@ if ($busqueda === '') {
     $consulta = $pdo->prepare(
         'SELECT id, identidad, nombres, apellidos, correo, telefono, fecha_nacimiento, carrera, created_at
          FROM estudiantes
-         WHERE identidad LIKE :busqueda
-            OR nombres LIKE :busqueda
-            OR apellidos LIKE :busqueda
-            OR correo LIKE :busqueda
-            OR carrera LIKE :busqueda
+         WHERE identidad LIKE :identidad
+            OR nombres LIKE :nombres
+            OR apellidos LIKE :apellidos
+            OR correo LIKE :correo
+            OR carrera LIKE :carrera
          ORDER BY id DESC'
     );
-    $consulta->execute(['busqueda' => '%' . $busqueda . '%']);
+    $terminoBusqueda = '%' . $busqueda . '%';
+    $consulta->execute([
+        'identidad' => $terminoBusqueda,
+        'nombres' => $terminoBusqueda,
+        'apellidos' => $terminoBusqueda,
+        'correo' => $terminoBusqueda,
+        'carrera' => $terminoBusqueda,
+    ]);
 }
 
 $estudiantes = $consulta->fetchAll();
