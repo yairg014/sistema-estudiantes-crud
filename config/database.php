@@ -5,11 +5,11 @@ declare(strict_types=1);
  * Configuración local de MySQL mediante PDO.
  * Ajusta estos valores antes de ejecutar el proyecto en XAMPP, Laragon o un servidor propio.
  */
-const DB_HOST = 'localhost';
+const DB_HOST = '127.0.0.1';
 const DB_NAME = 'sistema_estudiantes';
 const DB_USER = 'estudiantes_app';
 const DB_PASS = 'CambiarClave2026';
-const DB_PORT = '3306';
+const DB_PORT = '3307';
 const DB_CHARSET = 'utf8mb4';
 
 function conectarBaseDatos(): PDO

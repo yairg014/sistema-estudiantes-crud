@@ -1,14 +1,18 @@
 -- Sistema de Administración de Estudiantes
 -- Motor: MySQL 8+ / MariaDB 10.4+
 -- Codificación: UTF-8 (utf8mb4)
+-- Destino de esta entrega: XAMPP/MySQL en 127.0.0.1:3307.
 
 CREATE DATABASE IF NOT EXISTS sistema_estudiantes
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
--- Cuenta de aplicación para la conexión PDO. Cambia la clave antes de publicar el sistema.
+-- Cuenta de aplicación para la conexión PDO configurada en config/database.php.
+-- Se autorizan localhost y 127.0.0.1 porque MySQL distingue ambos orígenes.
 CREATE USER IF NOT EXISTS 'estudiantes_app'@'localhost' IDENTIFIED BY 'CambiarClave2026';
+CREATE USER IF NOT EXISTS 'estudiantes_app'@'127.0.0.1' IDENTIFIED BY 'CambiarClave2026';
 GRANT SELECT, INSERT, UPDATE, DELETE ON sistema_estudiantes.* TO 'estudiantes_app'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON sistema_estudiantes.* TO 'estudiantes_app'@'127.0.0.1';
 FLUSH PRIVILEGES;
 
 USE sistema_estudiantes;

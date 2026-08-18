@@ -28,7 +28,7 @@ El proyecto necesita **PHP 8.0 o superior**, la extensión `pdo_mysql` habilitad
 
 1. Copia la carpeta `entrega-sistema-estudiantes` en el directorio público de tu servidor. En XAMPP, normalmente corresponde a `htdocs`.
 2. Abre phpMyAdmin o una consola de MySQL e importa el archivo [`database/estudiantes.sql`](database/estudiantes.sql).
-3. Revisa [`config/database.php`](config/database.php). Cambia `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` y `DB_PORT` si las credenciales o el puerto de tu equipo son diferentes. XAMPP usa normalmente el puerto `3306`; si está configurado en `3307`, actualiza ese valor.
+3. La entrega está configurada para XAMPP/MySQL en `127.0.0.1:3307`. Revisa [`config/database.php`](config/database.php) y cambia `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` o `DB_PORT` únicamente si tu instalación usa valores distintos.
 4. Inicia Apache y MySQL/MariaDB.
 5. Abre en tu navegador la ruta del proyecto, por ejemplo: `http://localhost/entrega-sistema-estudiantes/`.
 
