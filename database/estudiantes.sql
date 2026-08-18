@@ -7,13 +7,9 @@ CREATE DATABASE IF NOT EXISTS sistema_estudiantes
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
--- Cuenta de aplicación para la conexión PDO configurada en config/database.php.
--- Se autorizan localhost y 127.0.0.1 porque MySQL distingue ambos orígenes.
-CREATE USER IF NOT EXISTS 'estudiantes_app'@'localhost' IDENTIFIED BY 'CambiarClave2026';
-CREATE USER IF NOT EXISTS 'estudiantes_app'@'127.0.0.1' IDENTIFIED BY 'CambiarClave2026';
-GRANT SELECT, INSERT, UPDATE, DELETE ON sistema_estudiantes.* TO 'estudiantes_app'@'localhost';
-GRANT SELECT, INSERT, UPDATE, DELETE ON sistema_estudiantes.* TO 'estudiantes_app'@'127.0.0.1';
-FLUSH PRIVILEGES;
+-- Este script no ejecuta CREATE USER ni GRANT. Así evita depender de las tablas
+-- internas de privilegios cuando XAMPP presenta errores de Aria. El CRUD se conecta
+-- con la cuenta administradora local definida en config/database.php.
 
 USE sistema_estudiantes;
 
