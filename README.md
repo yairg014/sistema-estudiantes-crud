@@ -28,7 +28,7 @@ El proyecto necesita **PHP 8.0 o superior**, la extensión `pdo_mysql` habilitad
 
 1. Copia la carpeta `entrega-sistema-estudiantes` en el directorio público de tu servidor. En XAMPP, normalmente corresponde a `htdocs`.
 2. Abre phpMyAdmin o una consola de MySQL e importa el archivo [`database/estudiantes.sql`](database/estudiantes.sql).
-3. Revisa [`config/database.php`](config/database.php). Cambia `DB_HOST`, `DB_NAME`, `DB_USER` y `DB_PASS` si las credenciales de tu equipo son diferentes.
+3. Revisa [`config/database.php`](config/database.php). Cambia `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` y `DB_PORT` si las credenciales o el puerto de tu equipo son diferentes. XAMPP usa normalmente el puerto `3306`; si está configurado en `3307`, actualiza ese valor.
 4. Inicia Apache y MySQL/MariaDB.
 5. Abre en tu navegador la ruta del proyecto, por ejemplo: `http://localhost/entrega-sistema-estudiantes/`.
 
@@ -55,9 +55,7 @@ entrega-sistema-estudiantes/
 ├── index.php                        # Operación READ y búsqueda
 ├── DER.mmd                          # DER editable en Mermaid
 ├── DER.png                          # DER listo para entregar
-├── DER.md                           # Descripción del modelo de datos
-├── GUIA_VIDEO.md                    # Guion de video de máximo 3 minutos
-└── DOCUMENTO_ENTREGA.md             # Documento con portada y URL de repositorio
+└── README.md                         # Descripción, instalación y seguridad del proyecto
 ```
 
 ## Seguridad implementada
@@ -73,21 +71,21 @@ entrega-sistema-estudiantes/
 
 ## Repositorio GitHub
 
-Antes de entregar, crea un repositorio **público** y sube el contenido de esta carpeta. Después agrega la dirección en el documento de entrega:
+El código fuente se publica en el siguiente repositorio **público**:
 
 ```text
-https://github.com/TU-USUARIO/sistema-estudiantes-crud
+https://github.com/yairg014/sistema-estudiantes-crud
 ```
 
-Invita como colaboradores a los integrantes del equipo desde **Settings → Collaborators** dentro del repositorio. La guía completa se encuentra en [`INSTRUCCIONES_GITHUB.md`](INSTRUCCIONES_GITHUB.md).
+Invita como colaboradores a los integrantes del equipo desde **Settings → Collaborators** dentro del repositorio.
 
 ## Materiales de entrega incluidos
 
 | Entregable | Archivo |
 |---|---|
-| Proyecto comprimido | `sistema-estudiantes-crud.zip` (se genera al finalizar la preparación) |
+| Proyecto comprimido | `sistema-estudiantes-crud.zip` |
 | Script SQL | `database/estudiantes.sql` |
 | DER limpio | `DER.png` y `DER.mmd` |
 | README | `README.md` |
-| Guion del video | `GUIA_VIDEO.md` |
-| Documento con portada y enlace | `DOCUMENTO_ENTREGA.md` |
+| Guion del video | Se prepara y entrega por separado. |
+| Documento con portada y enlace | Se prepara y entrega por separado. |

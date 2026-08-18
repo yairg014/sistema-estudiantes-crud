@@ -6,11 +6,15 @@ const DB_HOST = 'localhost';
 const DB_NAME = 'sistema_estudiantes';
 const DB_USER = 'estudiantes_app';
 const DB_PASS = 'CambiarClave2026';
+const DB_PORT = '3306';
 const DB_CHARSET = 'utf8mb4';
 
 function conectarBaseDatos(): PDO
 {
-    $dsn = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=' . DB_CHARSET;
+    $dsn = 'mysql:host=' . DB_HOST
+        . ';port=' . DB_PORT
+        . ';dbname=' . DB_NAME
+        . ';charset=' . DB_CHARSET;
 
     return new PDO($dsn, DB_USER, DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
