@@ -34,6 +34,8 @@ El proyecto necesita **PHP 8.0 o superior**, la extensión `pdo_mysql` habilitad
 
 > El script SQL crea la base de datos `sistema_estudiantes`, la tabla `estudiantes` y dos registros iniciales para facilitar la comprobación visual.
 
+> Si phpMyAdmin indica que la tabla `estudiantes` no tiene la columna `identidad`, importa `database/reinstalar_estudiantes_xampp.sql`. Este archivo elimina únicamente la tabla antigua y la reconstruye con la estructura correcta.
+
 ## Estructura del proyecto
 
 ```text
